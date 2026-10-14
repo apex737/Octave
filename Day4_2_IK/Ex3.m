@@ -45,13 +45,18 @@ function twoDofRobotIK_Sim()
         y2 = end_y;
 
         cla;
+        % 타원 궤적
         plot(x, y, 'g--');
+        % j0->j1
         plot([0 x1], [0 y1], 'b', 'linewidth', 2);
+        %  j1->j2
         plot([x1, x2], [y1 y2], 'r', 'linewidth', 2);
+        % 엔드 이펙터
         plot(x2, y2, 'ko', 'markersize', 10, 'markerFaceColor', 'k');
+
         plot(target_x, target_y, 'gx', 'markersize', 10);
 
-        pause(0.01);
+        pause(0.1);
     endfor
 
 endfunction
